@@ -1,8 +1,14 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="drawer" temporary>
-      Hello
-    </v-navigation-drawer>
+    <VNavigationDrawer v-model:model-value="drawer" expand-on-hover="" rail="" temporary="">
+      <VList>
+          <VListItem
+            prepend-avatar="https://randomuser.me/api/portraits/women/85.jpg"
+            subtitle="sandra_a88@gmailcom"
+            title="Sandra Adams"
+          ></VListItem>
+       </VList>
+    </VNavigationDrawer>
 
     <v-app-bar app>
       <v-app-bar-nav-icon @click="drawer = !drawer" />
@@ -19,6 +25,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import { VList, VListItem, VNavigationDrawer } from 'vuetify/lib/components';
 
 const drawer = ref(false)
 </script>
