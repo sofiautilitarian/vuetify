@@ -6,6 +6,7 @@
     <!-- Main content -->
     <v-main>
       <v-container>
+        
         <v-card class="pa-4">
           <v-navigation-drawer
             v-model="drawer"
@@ -21,16 +22,19 @@
           </v-navigation-drawer>
         </v-card>
       </v-container>
+      
     </v-main>
   </v-app>
 </template>
 
 <script>
+import ImageGallery from './components/ImageGallery.vue';
 import SideBar from './components/SideBar.vue';
 
 export default {
   components: {
     SideBar,
+    ImageGallery
   },
   data() {
     return {
